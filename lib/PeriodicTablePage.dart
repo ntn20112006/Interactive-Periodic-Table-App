@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:interactive_periodic_table_app/PeriodicElementInformationPage.dart';
 import 'package:interactive_periodic_table_app/PeriodicElementObject.dart';
 
 class PeriodicTablePage extends StatelessWidget {
@@ -22,7 +23,8 @@ class PeriodicTablePage extends StatelessWidget {
                     elementName: periodicElement.elementName,
                     elementNumber: periodicElement.elementNumber,
                     elementSymbol: periodicElement.elementSymbol,
-                    color: periodicElement.color
+                    color: periodicElement.color,
+                    elementDescription: "test"
                   )
               ]
             )
@@ -37,30 +39,42 @@ class PeriodicTableElementCell extends StatelessWidget {
   final String elementSymbol;
   final String elementNumber;
   final Color color;
+  final String elementDescription;
 
   const PeriodicTableElementCell({
     super.key,
     required this.elementName,
     required this.elementNumber,
     required this.elementSymbol,
-    required this.color
+    required this.color,
+    required this.elementDescription
   });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 50,
-      height: 50,
-      decoration: BoxDecoration(
-        color: color,
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          ElementNumber(elementNumber: elementNumber),
-          ElementSymbol(elementSymbol: elementSymbol),
-          ElementName(elementName: elementName)
-        ]
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => PeriodicElementInformationPage(elementSymbol: elementSymbol, elementDescription: elementDescription)
+          )
+        );
+      },
+      child: Container (
+        width: 50,
+        height: 50,
+        decoration: BoxDecoration(
+          color: color,
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            ElementNumber(elementNumber: elementNumber),
+            ElementSymbol(elementSymbol: elementSymbol),
+            ElementName(elementName: elementName)
+          ]
+        )
       )
     );
   }

@@ -1,23 +1,30 @@
 import 'package:flutter/material.dart';
 
 class PeriodicElementInformationPage extends StatelessWidget {
-  const PeriodicElementInformationPage({super.key});
+  final String elementSymbol;
+  final String elementDescription;
+
+  const PeriodicElementInformationPage({
+    super.key,
+    required this.elementSymbol,
+    required this.elementDescription
+  });
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Column(
         children: [
           Row(
             children: [
-              ElementSymbol(elementSymbol: "H"),
-              ElementDescription(elementDescription: "Some description")
+              ElementSymbol(elementSymbol: elementSymbol),
+              ElementDescription(elementDescription: elementDescription)
             ],
           ),
           Row(
             children: [
-              ElementDescription(elementDescription: "Some Description"),
-              icon()
+              ElementDescription(elementDescription: elementDescription),
+              const icon()
             ],
           )
         ]

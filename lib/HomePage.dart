@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:interactive_periodic_table_app/PeriodicElementObject.dart';
+import 'package:interactive_periodic_table_app/PeriodicTablePage.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
-
-  void _navigateToPeriodicTable() {
-    // TODO Navigate to period table screen
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -18,15 +16,45 @@ class HomePage extends StatelessWidget {
             const Title(),
             const LineSeparator(),
             GestureDetector(
-              onTap: _navigateToPeriodicTable,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => PeriodicTablePage(
+                      periodicElementsList: [
+                        [
+                          PeriodicElementObject(
+                            elementName: "Hydrogen",
+                            elementSymbol: "H",
+                            elementNumber: "1",
+                            elementDescription: "test",
+                            color: Colors.blue
+                          ),
+                          PeriodicElementObject(
+                            elementName: "Lithium",
+                            elementSymbol: "Li",
+                            elementNumber: "3",
+                            elementDescription: "test",
+                            color: Colors.green
+                          )
+                        ],
+                        [PeriodicElementObject(
+                            elementName: "Belium",
+                            elementSymbol: "Be",
+                            elementNumber: "2",
+                            elementDescription: "test",
+                            color: Colors.red
+                          )
+                        ]]
+                    )
+                  )
+                );
+              },
               child: const NavigationButton()
             )
           ]
         )
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _navigateToPeriodicTable,
-      ),
+      )
     );
   }
 }
