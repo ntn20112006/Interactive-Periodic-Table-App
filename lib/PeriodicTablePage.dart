@@ -21,13 +21,13 @@ class PeriodicTablePage extends StatelessWidget {
                   PeriodicTableElementCell(
                     elementName: periodicElement.elementName,
                     elementNumber: periodicElement.elementNumber,
-                    elementSymbol: periodicElement.elementSymbol
+                    elementSymbol: periodicElement.elementSymbol,
+                    color: periodicElement.color
                   )
               ]
             )
         ]
       )
-      // body: periodicTableElementCell(elementName: "Hydrogen", elementNumber: "1", elementSymbol: "H",)
     );
   }
 }
@@ -36,12 +36,14 @@ class PeriodicTableElementCell extends StatelessWidget {
   final String elementName;
   final String elementSymbol;
   final String elementNumber;
+  final Color color;
 
   const PeriodicTableElementCell({
     super.key,
     required this.elementName,
     required this.elementNumber,
-    required this.elementSymbol
+    required this.elementSymbol,
+    required this.color
   });
 
   @override
@@ -49,8 +51,8 @@ class PeriodicTableElementCell extends StatelessWidget {
     return Container(
       width: 50,
       height: 50,
-      decoration: const BoxDecoration(
-        color: Colors.blueGrey,
+      decoration: BoxDecoration(
+        color: color,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,

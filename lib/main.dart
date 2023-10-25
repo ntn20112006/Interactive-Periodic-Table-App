@@ -18,30 +18,34 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
+      //testing
       // home: const HomePage(),
-      home: PeriodicTablePage(periodicElementsList: [
-        [
-          PeriodicElementObject(
-            elementName: "Hydrogen",
-            elementSymbol: "H",
-            elementNumber: "1",
-            elementDescription: "test"
-          ),
-          PeriodicElementObject(
-            elementName: "Lithium",
-            elementSymbol: "Li",
-            elementNumber: "3",
-            elementDescription: "test"
-          )
-        ],
-        [PeriodicElementObject(
-            elementName: "Belium",
-            elementSymbol: "Be",
-            elementNumber: "2",
-            elementDescription: "test"
-          )
-        ]]
-      )
+      // home: PeriodicTablePage(periodicElementsList: [
+      //   [
+      //     PeriodicElementObject(
+      //       elementName: "Hydrogen",
+      //       elementSymbol: "H",
+      //       elementNumber: "1",
+      //       elementDescription: "test",
+      //       color: Color.blue
+      //     ),
+      //     PeriodicElementObject(
+      //       elementName: "Lithium",
+      //       elementSymbol: "Li",
+      //       elementNumber: "3",
+      //       elementDescription: "test",
+      //       color: Color.green
+      //     )
+      //   ],
+      //   [PeriodicElementObject(
+      //       elementName: "Belium",
+      //       elementSymbol: "Be",
+      //       elementNumber: "2",
+      //       elementDescription: "test",
+      //       color: Color.red
+      //     )
+      //   ]]
+      // )
       // home: const PeriodicElementInformationPage()
     );
   }
