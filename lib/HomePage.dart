@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:interactive_periodic_table_app/PeriodicElementObject.dart';
 import 'package:interactive_periodic_table_app/PeriodicTablePage.dart';
+import 'package:interactive_periodic_table_app/Repository/Repository.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -21,31 +21,7 @@ class HomePage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => PeriodicTablePage(
-                      periodicElementsList: [
-                        [
-                          PeriodicElementObject(
-                            elementName: "Hydrogen",
-                            elementSymbol: "H",
-                            elementNumber: "1",
-                            elementDescription: "test",
-                            color: Colors.blue
-                          ),
-                          PeriodicElementObject(
-                            elementName: "Lithium",
-                            elementSymbol: "Li",
-                            elementNumber: "3",
-                            elementDescription: "test",
-                            color: Colors.green
-                          )
-                        ],
-                        [PeriodicElementObject(
-                            elementName: "Belium",
-                            elementSymbol: "Be",
-                            elementNumber: "2",
-                            elementDescription: "test",
-                            color: Colors.red
-                          )
-                        ]]
+                      periodicElementsList: Repository.getPeriodicElementsList()
                     )
                   )
                 );
