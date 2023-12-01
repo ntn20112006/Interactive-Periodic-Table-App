@@ -1,15 +1,21 @@
 # Interactive Periodic Table Cross Platform App
 
 ## Table of Content
-  1. About the project
-     - Built with
-  2. Getting started
+  1. Overview
+     - Features
+     - Goals
+  3. Getting started
      - Installation
-  3. License
-  4. Contributors
-  5. Contact
+  4. License
+  5. Contributors
+  6. Contact
 
-## About the project
+## Overview
+The Periodic Table App is a comprehensive, interactive, and educational tool designed to bring the fascinating world of elements to your fingertips. Developed with the intent to serve both educational and research purposes, this app is ideal for students, teachers, chemists, and anyone curious about the building blocks of our universe.
+
+### Features
+### Goals
+Our primary goal is to make learning chemistry engaging and accessible to everyone. We aim to provide a powerful educational resource that enhances the learning experience for students and enthusiasts alike.
 
 ## Getting started
 ### Open
