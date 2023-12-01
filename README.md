@@ -19,5 +19,10 @@
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contributors
+Thanks go to all these wonderful people
+
+- Tom Nguyen
+- Aryan
+- Pranav
 
 ## Contact
