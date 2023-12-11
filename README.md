@@ -14,6 +14,9 @@
 The Periodic Table App is a comprehensive, interactive, and educational tool designed to bring the fascinating world of elements to your fingertips. Developed with the intent to serve both educational and research purposes, this app is ideal for students, teachers, chemists, and anyone curious about the building blocks of our universe.
 
 ### Features
+  - Displaying details about selected elements
+  - Display element state based on selected temperature
+
 ### Goals
 Our primary goal is to make learning chemistry engaging and accessible to everyone. We aim to provide a powerful educational resource that enhances the learning experience for students and enthusiasts alike.
 
