@@ -15,6 +15,7 @@ The Periodic Table App is a comprehensive, interactive, and educational tool des
 
 ### Features
   - Displaying details about selected elements
+      - Including atomic mass and number, electronegativity, melting and boiling point, electron configuration, type of element, etc
   - Display element state based on selected temperature
 
 ### Goals
